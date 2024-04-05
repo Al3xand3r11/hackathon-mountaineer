@@ -1,11 +1,18 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import { RxAvatar } from 'react-icons/rx';
+import { useNavigate } from 'react-router-dom';
+import Climb from '../assets/icons/climb.svg';
 import Live from '../assets/icons/Live.png';
 import Play from '../assets/icons/Play.png';
 import Search from '../assets/icons/Search.png';
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
+    const routeChange = () => {
+        navigate('/');
+    }
     return (
 <nav className="bg-black  fixed w-full z-50 top-0 start-0  ">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -29,6 +36,10 @@ const NavBar = () => {
       <li className='flex'>
         <img src={Search} alt="Search" className="5-8 h-8 pt-2"/>
         <a href="#" className="block py-2 px-3 text-white  ">Search</a>
+      </li>
+      <li className='flex'>
+        <img src={Climb} alt="Search" className="5-8 h-8 pt-2"/>
+        <button onClick={routeChange} className="block py-2 px-3 text-white  ">Mountaineer</button>
       </li>
     </ul>
   </div>

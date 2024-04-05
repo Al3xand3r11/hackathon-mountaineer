@@ -15,10 +15,9 @@ const HeroSection = () => {
                 <img src={Logo} alt="Logo" className="w-96 h-80"/>
             </div>
             <div>
-            <p className='text-white pt-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure </p>
+            <p className='text-white pt-8 pr-12'> Would you like to be guided by a mountaineer on your content journey?</p>
             </div>
-            <div className='flex justify-center items-center pt-10'>
+            <div className='flex justify-center items-center pt-10 pr-8'>
             <button type="button" className='text-yellow hover:text-white border border-yellow hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium 
             rounded-3xl text-sm px-5 py-2.5 text-center me-2 mb-2 w-36' onClick={routeChange}>
                 Yes

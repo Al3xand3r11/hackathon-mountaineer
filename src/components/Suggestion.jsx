@@ -1,8 +1,24 @@
+import { Autoplay, Avia } from '@cbsinteractive/avia-js-react';
+
+import React from 'react';
 const Suggestion = () => {
     return (
-        <div className="suggestion">
-            <h1>Suggestion</h1>
+        <>
+        <div className='suggestion bg-white w-full h-screen bg-cover bg-center'>
+        <Avia 
+  resource={{
+    location: {
+      mediaUrl: "https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/v2/stitch/hls/channel/5812be1c249444e05d09cc50/master.m3u8?advertisingId=&appName=web&appVersion=5.40.0&app_name=web&clientDeviceType=0&clientID=08552cb7-b923-5a02-9dce-12d141536158&clientModelNumber=4670X&country=US&deviceDNT=false&deviceId=08552cb7-b923-5a02-9dce-12d141536158&deviceLat=33.1100&deviceLon=-117.2900&deviceMake=android&deviceModel=4670x&deviceType=android%2Cweb&deviceVersion=4760&marketingRegion=US&serverSideAds=false&sessionID=f2aae142-f2e7-11ee-8cc9-86392c8303c5&sid=f2aae142-f2e7-11ee-8cc9-86392c8303c5&userId=&masterJWTPassthrough=true&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6ImRhMzA4ZDdlLTllYjgtNDdkNy04ZjE2LWQ4NGI5YTkyYTg0NyIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI3MDA5NmEzZS1mMzhjLTExZWUtYjFjZC02NjgzNjc4MTg3Y2QiLCJjbGllbnRJUCI6IjEzMS4yMjYuMzMuMzUiLCJjaXR5IjoiTGEgR3JhbmRlIiwicG9zdGFsQ29kZSI6Ijk3ODUwIiwiY291bnRyeSI6IlVTIiwiZG1hIjo4MjAsImFjdGl2ZVJlZ2lvbiI6IlVTIiwiZGV2aWNlTGF0Ijo0NS4zMzAwMDE4MzEwNTQ2OSwiZGV2aWNlTG9uIjotMTE4LjA4MDAwMTgzMTA1NDY5LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYix3ZWIiLCJkZXZpY2VWZXJzaW9uIjoiNDc2MCIsImRldmljZU1ha2UiOiJ3ZWIiLCJkZXZpY2VNb2RlbCI6IjQ2NzB4IiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI1LjQ5LjAtZGVidWciLCJjbGllbnRJRCI6IjA4NTUyY2I3LWI5MjMtNWEwMi05ZGNlLTEyZDE0MTUzNjE1OCIsImNtQXVkaWVuY2VJRCI6IiIsImlzQ2xpZW50RE5UIjpmYWxzZSwidXNlcklEIjoiIiwibG9nTGV2ZWwiOiJERUZBVUxUIiwidGltZVpvbmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJpc1N0aXRjaGVyRWtzIjp0cnVlLCJzZWFyY2hBUEkiOnsibWF0Y2hFeGFjdEluUGhyYXNlRW5hYmxlZCI6dHJ1ZSwibWF0Y2hJbkFjdG9yc0VuYWJsZWQiOnRydWUsIm1hdGNoSW5EaXJlY3RvcnNFbmFibGVkIjp0cnVlLCJuZXh1c1RpbWVvdXRNcyI6NTAwLCJxdWVyeVN5bm9ueW1zRW5hYmxlZCI6dHJ1ZSwicXVlcnlWZXJzaW9uIjoidjEiLCJzZWFyY2hQcm94eUVuaGFuY2VtZW50IjpmYWxzZX19LCJpc09mZmljZUlQIjp0cnVlLCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IlhZNjM5NThFZGR4OFFRR3hVYkFfNzJGbTllNlc1WTB6X1VRUk9LdnY0ZjgtRmk3VnciLCJmd1ZjSUQyQ29wcGEiOiIwODU1MmNiNy1iOTIzLTVhMDItOWRjZS0xMmQxNDE1MzYxNTgiLCJjdXN0b21QYXJhbXMiOnsiZm1zX2xpdmVyYW1wX2lkbCI6IiIsImZtc19lbWFpbGhhc2giOiIiLCJmbXNfc3Vic2NyaWJlcmlkIjoiIiwiZm1zX2lmYSI6IiIsImZtc19pZGZ2IjoiIiwiZm1zX3VzZXJpZCI6IjA4NTUyY2I3LWI5MjMtNWEwMi05ZGNlLTEyZDE0MTUzNjE1OCIsImZtc192Y2lkMnR5cGUiOiJsaXZlcmFtcCIsImZtc19yYW1wX2lkIjoiWFk2Mzk1OEVkZHg4UVFHeFViQV83MkZtOWU2VzVZMHpfVVFST0t2djRmOC1GaTdWdyIsImZtc19oaF9yYW1wX2lkIjoiaFk2Mzk1WGloRzBhbXhfMFpXcW4yblhPSW1CNXB0NHpHeXp5VHA3NVg2cllYZXBMWSIsImZtc19iaWRpZHR5cGUiOiIxMDIzIiwiX2Z3XzNQX1VJRCI6IklETDpBbklYS09JNHduc2hlaDlkWm1WVFN1eDY2SEgwbnVtMnFnSUtoTnZaeUExTFdXZS1fekhjYTdOMiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1EZzFOVEpqWWpjdFlqa3lNeTAxWVRBeUxUbGtZMlV0TVRKa01UUXhOVE0yTVRVNCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3MTI0MzU4OTksImlhdCI6MTcxMjM0OTQ5OSwianRpIjoiNTFjYTdjNDMtZDVjYS00ZjE4LWJiZDAtZTI2NThiN2JlMjFjIn0.pJfRlb_WsPbyyfnjbNs59f0cDiO0CmSf83dSLIzMB6U"
+    }
+  }}
+  options={{
+    autoplay: Autoplay.ATTEMPT_UNMUTED_THEN_MUTED
+  }}
+  controls
+  debug
+/>
         </div>
+        </>
     );
     }
 
